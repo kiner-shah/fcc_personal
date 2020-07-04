@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				font-family: sans-serif, Arial;
+			}
+			#navbar {
+				display: inline-block;
+				width: 100%;
+				text-align: right;
+				background-color: black;
+				float: right;
+				margin: 0;
+				padding: 2%;
+				position: fixed;
+			}
+			#navbar a {
+				color: white;
+				text-decoration: none;
+				margin-left: 1%;
+				margin-right: 1%;
+				padding: 2%;
+			}
+			#navbar a:hover {
+				background-color: white;
+				color: black;
+			}
+			.fixed {
+				position: fixed;
+			}
+			#welcome-section {
+				background-color: whitesmoke;
+				text-align: center;
+				margin: 0;
+				height: 100vh;
+				/*padding: 20%;*/
+			}
+			#projects {
+				display: grid;
+				grid-template-columns: 50% 50%;
+				grid-column-gap: 20px;
+				padding: 20%;
+			}
+			.project-tile {
+				display: grid;
+				grid-template-rows: 80% 20%;
+				text-align: center;
+			}
+			.project-tile h3 {
+				color: #e63900;
+				background-color: orange;
+				padding: 10%;
+				margin: 0;
+			}
+			.project-tile a {
+				color: navy;
+				background-color: navajowhite;
+				padding: 10%;
+			}
+			#contact {
+				padding: 5%;
+				text-align: center;
+			}
+			#contact a {
+				color: gray;
+			}
+			@media screen and (max-width: 560px) {
+				#navbar {
+					display: block;
+				}
+				#projects {
+					grid-template-columns: none;
+					grid-row-gap: 40px;
+				}
+				.project-tile h3 {
+					font-size: 4vw;
+				}
+			}
+		</style>
+
+		<script>
+			/*var header_offset_top;
+			window.onload = function() {
+				header_offset_top = document.getElementById("navbar").offsetTop;
+			}
+			window.onscroll = function() {
+				var header = document.getElementById("navbar");
+				if (window.pageYOffset > header_offset_top) {
+					header.classList.add("fixed");
+				}
+				else {
+					header.classList.remove("fixed");
+				}
+			}*/
+		</script>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<a href="#welcome-section">About</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</nav>
+
+		<main>
+			<section id="welcome-section">
+				<h1 style="margin: 0; padding: 10%">Welcome to my website, I am Baka</h1>
+				<p>I am a Software Developer with multiple skills ;-)</p>
+			</section>
+
+			<h1 style="text-align:center">My projects</h1>
+			<section id="projects">
+				<div class="project-tile">
+					<h3>DailyExpenseCalculator</h3>
+					<a href="https://github.com/kiner-shah/DailyExpenseCalculator">See project</a>
+				</div>
+				<div class="project-tile">
+					<h3>Medistore</h3>
+					<a href="https://github.com/kiner-shah/Medistore">See project</a>
+				</div>
+			</section>
+
+
+			<section id="contact">
+				<h1>Get in touch</h1>
+				<a id="profile-link" href="https://github.com/kiner-shah" target="_blank">Github</a>
+			</section>
+		</main>
+	</body>
+</html>
